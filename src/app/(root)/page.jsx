@@ -18,6 +18,13 @@ export default function Home() {
       >
         Go to About
       </Link>
+
+      <Link
+        className="bg-red-200 border rounded-md mx-3 p-2 px-4"
+        href={"/posts"}
+      >
+       See Posts
+      </Link>
     </div>
   );
 }
