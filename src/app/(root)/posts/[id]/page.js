@@ -1,4 +1,4 @@
-export default async function ({ params }) {
+export default async function PostDetail ({ params }) {
   let res = await fetch(`https://dummyjson.com/posts/${params.id}`);
   res = await res.json();
   return (
