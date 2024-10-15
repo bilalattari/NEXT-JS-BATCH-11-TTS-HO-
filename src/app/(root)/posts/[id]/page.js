@@ -11,9 +11,9 @@ export default async function ({ params }) {
         <h1 className={"font-bold text-3xl"}>{res.title}</h1>
         <h1 className={"font-normal text-xl"}>{res.body}</h1>
         <h1 className="font-normal flex flex- row gap-3 text-xl">
-          {res.tags.map((tag) => (
-            <div key={tag} className={"p-2 rounded inline-block  bg-blue-50 "}>
-              {tag}
+          {res.tags.map((tag , ind) => (
+            <div key={ind} className={"p-2 rounded inline-block  bg-blue-50"}>
+             <h1>{tag}</h1> 
             </div>
           ))}
         </h1>
