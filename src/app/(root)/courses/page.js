@@ -2,7 +2,7 @@ import CourseCard from "@/components/courseCard";
 import AddCourseForm from "@/components/courseForm";
 
 const Courses = async () => {
-  let courses = await fetch("http://localhost:3000/api/courses");
+  let courses = await fetch(`${process.env.API_URL}api/courses`);
   courses = await courses.json();
   return (
     <div className="p-20">
