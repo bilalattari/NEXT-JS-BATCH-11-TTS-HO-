@@ -1,9 +1,17 @@
-const Courses = () => {
+import CourseCard from "@/components/courseCard";
+import AddCourseForm from "@/components/courseForm";
+
+const Courses = async () => {
+  let courses = await fetch("http://localhost:3000/api/courses");
+  courses = await courses.json();
   return (
     <div className="p-20">
-      <h1 className="text-4xl text-center font-medium">Hello Courses Page</h1>
+      <AddCourseForm />
+      {courses?.courses?.map((course) => (
+        <CourseCard key={course.id} item={course} />
+      ))}
     </div>
   );
 };
 
-export default Courses
+export default Courses;
